@@ -1,0 +1,410 @@
+{% extends "layout.html" %}
+
+{% block title %}Gift of Shiva - Premium Cannabis{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero-section">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <div class="hero-content" data-aos="fade-right">
+                    <h1>Experience Premium Cannabis</h1>
+                    <p>Discover our handpicked selection of premium cannabis strains. Each product is carefully curated for quality and potency.</p>
+                    <a href="#featured-strains" class="btn-primary">Explore Products</a>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="hero-image" data-aos="fade-left">
+                    <img src="{{ url_for('static', filename='images/hero-image.jpg') }}" alt="Premium Cannabis" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Featured Strains Section -->
+<section id="featured-strains" class="featured-strains-section">
+    <div class="container">
+        <div class="section-header text-center" data-aos="fade-up">
+            <h2>Featured Products</h2>
+            <p>Explore our carefully selected premium strains</p>
+        </div>
+        
+        <!-- Strain Filters -->
+        <div class="strain-filters" data-aos="fade-up">
+            <button class="filter-btn active" data-filter="all">All Strains</button>
+            <button class="filter-btn" data-filter="sativa">Sativa</button>
+            <button class="filter-btn" data-filter="indica">Indica</button>
+            <button class="filter-btn" data-filter="hybrid">Hybrid</button>
+        </div>
+        
+        <!-- Strains Grid -->
+        <div class="row" id="productsGrid">
+            {% for product in products %}
+            <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="{{ loop.index * 100 }}">
+                <div class="strain-card">
+                    <div class="strain-image-wrapper">
+                        <img src="{{ url_for('static', filename=product.image) }}" alt="{{ product.name }}" class="strain-image">
+                        <div class="strain-type-badge">{{ product.type }}</div>
+                        <div class="availability-badge {% if product.status == 'Active' %}in_stock{% elif product.status == 'Low Stock' %}low_stock{% else %}out_of_stock{% endif %}">
+                            {% if product.status == 'Active' %}In Stock{% elif product.status == 'Low Stock' %}Low Stock{% else %}Out of Stock{% endif %}
+                        </div>
+                    </div>
+                    <div class="strain-content">
+                        <h3 class="strain-title">{{ product.name }}</h3>
+                        <div class="strain-meta">
+                            <div class="strain-info">
+                                <i class="fas fa-flask"></i> {{ product.thc }}
+                            </div>
+                            <div class="strain-price">{{ product.price }}</div>
+                        </div>
+                        <div class="strain-effects">
+                            {% for effect in product.effects %}
+                            <span class="effect-pill"><i class="{{ effect.icon }}"></i> {{ effect.name }}</span>
+                            {% endfor %}
+                        </div>
+                        <button class="btn-buy-now mt-3" onclick="showProductDetails({{ product.id }})">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<!-- About Us Section -->
+<section id="about-us" class="about-section">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <div class="about-image" data-aos="fade-right">
+                    <img src="{{ url_for('static', filename='images/about-image.jpg') }}" alt="About Gift of Shiva" class="img-fluid">
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="about-content" data-aos="fade-left">
+                    <h2>About Gift of Shiva</h2>
+                    <p>At Gift of Shiva, we are passionate about providing the finest quality cannabis products to our customers. Our mission is to offer a premium selection of strains that cater to various preferences and needs.</p>
+                    <p>Each product in our collection is carefully sourced and tested to ensure exceptional quality and potency. We take pride in our commitment to excellence and customer satisfaction.</p>
+                    <div class="about-features">
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Premium Quality</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-leaf"></i>
+                            <span>Carefully Sourced</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-flask"></i>
+                            <span>Lab Tested</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="contact-section">
+    <div class="container">
+        <div class="section-header text-center" data-aos="fade-up">
+            <h2>Contact Us</h2>
+            <p>Have questions? We're here to help.</p>
+        </div>
+        <div class="row">
+            <div class="col-lg-6" data-aos="fade-right">
+                <div class="contact-form">
+                    <form action="#" method="post">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Your Name</label>
+                            <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email Address</label>
+                            <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea class="form-control" id="message" rows="5" placeholder="Enter your message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+            <div class="col-lg-6" data-aos="fade-left">
+                <div class="contact-info">
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h3>Our Location</h3>
+                            <p>{{ settings.contact.contact_address|default('123 Cannabis Street, WeedTown, 98765') }}</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h3>Phone Number</h3>
+                            <p>{{ settings.contact.contact_phone|default('(555) 123-4567') }}</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3>Email Address</h3>
+                            <p>{{ settings.contact.contact_email|default('info@giftofshiva.com') }}</p>
+                        </div>
+                    </div>
+                    {% if settings.contact.telegram_username %}
+                    <div class="info-item">
+                        <i class="fab fa-telegram"></i>
+                        <div>
+                            <h3>Telegram</h3>
+                            <p>{{ settings.contact.telegram_username }}</p>
+                        </div>
+                    </div>
+                    {% endif %}
+                    <div class="info-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h3>Opening Hours</h3>
+                            <p>Monday - Saturday: 9am - 9pm<br>Sunday: 10am - 6pm</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block modals %}
+<!-- Product Details Modal -->
+<div class="modal fade" id="strainDetailsModal" tabindex="-1" aria-labelledby="strainDetailsTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="strainDetailsTitle">Product Details</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <img id="strainDetailsImage" src="" alt="" class="img-fluid strain-detail-image">
+                        <div class="strain-details-badges">
+                            <span id="strainDetailsTypeBadge" class="strain-detail-type"></span>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="strain-details-content">
+                            <div class="strain-details-header">
+                                <div class="strain-meta-details">
+                                    <div class="meta-item">
+                                        <i class="fas fa-cannabis"></i>
+                                        <span id="strainDetailsType"></span>
+                                    </div>
+                                    <div class="meta-item">
+                                        <i class="fas fa-flask"></i>
+                                        <span id="strainDetailsTHC"></span>
+                                    </div>
+                                </div>
+                                <div class="strain-price-availability">
+                                    <div class="price">
+                                        <span id="strainDetailsPrice"></span>
+                                    </div>
+                                    <div class="availability">
+                                        <span id="strainDetailsAvailability"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="strain-description">
+                                <h5>Description</h5>
+                                <p id="strainDetailsDescription"></p>
+                            </div>
+                            <div class="strain-effects-container">
+                                <h5>Effects</h5>
+                                <div id="strainDetailsEffects" class="effects-list"></div>
+                            </div>
+                            <button id="buyNowButton" class="btn-buy-now">
+                                <i class="fas fa-shopping-cart"></i> Buy Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Checkout Modal -->
+<div class="modal fade" id="checkoutModal" tabindex="-1" aria-labelledby="checkoutModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="checkoutModalLabel">Contact For Order</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div id="checkoutContent">
+                    <div class="selected-product mb-4">
+                        <h6>Selected Product</h6>
+                        <div class="product-preview">
+                            <img id="checkoutProductImage" src="" alt="" class="checkout-image">
+                            <div class="product-details">
+                                <h6 id="checkoutProductName"></h6>
+                                <div class="product-price" id="checkoutProductPrice"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-details mb-4">
+                        <h6>Contact Information</h6>
+                        <ul class="contact-info-list">
+                            <li><i class="fas fa-map-marker-alt"></i> 123 Cannabis Street, WeedTown, 98765</li>
+                            <li><i class="fas fa-phone"></i> (555) 123-4567</li>
+                            <li><i class="fas fa-envelope"></i> info@giftofshiva.com</li>
+                            <li><i class="fab fa-telegram"></i> @GiftOfShivaOfficial</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="delivery-fees">
+                        <h6>Delivery Fees by Township</h6>
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Township</th>
+                                    <th>Fee</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Downtown</td>
+                                    <td>$5.00</td>
+                                </tr>
+                                <tr>
+                                    <td>North District</td>
+                                    <td>$7.50</td>
+                                </tr>
+                                <tr>
+                                    <td>East Village</td>
+                                    <td>$6.00</td>
+                                </tr>
+                                <tr>
+                                    <td>South Side</td>
+                                    <td>$8.00</td>
+                                </tr>
+                                <tr>
+                                    <td>West End</td>
+                                    <td>$7.00</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <div class="text-center mt-4">
+                        <button type="button" class="btn-primary" data-bs-dismiss="modal">
+                            <i class="fas fa-check"></i> Got It
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+    // Initialize AOS
+    AOS.init({
+        duration: 1000,
+        once: true
+    });
+    
+    // Define current product ID globally
+    var currentProductId = null;
+    
+    // Make products data globally available - add to window object to make it accessible from main.js
+    var productsData = {{ products|tojson }};
+    window.productsData = productsData;
+    
+    // Filter Products
+    document.querySelectorAll('.filter-btn').forEach(button => {
+        button.addEventListener('click', function() {
+            // Update active state
+            document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+            this.classList.add('active');
+            
+            // Get filter type
+            const filterType = this.getAttribute('data-filter');
+            
+            // Filter products
+            let filteredProducts = filterType === 'all' 
+                ? productsData 
+                : productsData.filter(product => product.type.toLowerCase() === filterType.toLowerCase());
+            
+            // Get the products grid
+            const grid = document.getElementById('productsGrid');
+            
+            // Clear the grid
+            grid.innerHTML = '';
+            
+            // Add filtered products
+            filteredProducts.forEach(product => {
+                // Fix image path - ensure we don't have duplicated 'static'
+                var imagePath = product.image;
+                if (imagePath.startsWith('static/')) {
+                    imagePath = imagePath.substring(7); // Remove 'static/' prefix
+                }
+                
+                const col = document.createElement('div');
+                col.className = 'col-md-6 col-lg-4 mb-4';
+                col.setAttribute('data-aos', 'fade-up');
+                
+                col.innerHTML = 
+                    '<div class="strain-card">' +
+                    '<div class="strain-image-wrapper">' +
+                    '<img src="{{ url_for('static', filename='') }}' + imagePath + '"' + 
+                    ' alt="' + product.name + '"' + 
+                    ' class="strain-image"' + 
+                    ' onerror="this.src=\'{{ url_for('static', filename='images/products/default.jpg') }}\'">' +
+                    '<div class="strain-type-badge">' + product.type + '</div>' +
+                    '<div class="availability-badge ' + (product.status === 'Active' ? 'in_stock' : product.status === 'Low Stock' ? 'low_stock' : 'out_of_stock') + '">' +
+                    (product.status === 'Active' ? 'In Stock' : product.status === 'Low Stock' ? 'Low Stock' : 'Out of Stock') +
+                    '</div>' +
+                    '</div>' +
+                    '<div class="strain-content">' +
+                    '<h3 class="strain-title">' + product.name + '</h3>' +
+                    '<div class="strain-meta">' +
+                    '<div class="strain-info">' +
+                    '<i class="fas fa-flask"></i> ' + product.thc +
+                    '</div>' +
+                    '<div class="strain-price">' + product.price + '</div>' +
+                    '</div>' +
+                    '<div class="strain-effects">';
+                
+                // Add effects if they exist
+                if (product.effects && product.effects.length > 0) {
+                    for (let i = 0; i < product.effects.length; i++) {
+                        col.innerHTML += '<span class="effect-pill"><i class="' + product.effects[i].icon + '"></i> ' + product.effects[i].name + '</span>';
+                    }
+                }
+                
+                col.innerHTML += 
+                    '</div>' +
+                    '<button class="btn-buy-now mt-3" onclick="showProductDetails(' + product.id + ')">' +
+                    'View Details' +
+                    '</button>' +
+                    '</div>' +
+                    '</div>';
+                
+                grid.appendChild(col);
+            });
+        });
+    });
+</script>
+{% endblock %} 

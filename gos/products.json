@@ -1,0 +1,19 @@
+[
+    {
+        "id": 1,
+        "name": "asdf",
+        "type": "Sativa",
+        "thc": "12",
+        "price": "12000",
+        "status": "Active",
+        "description": "asdf",
+        "rating": 4.5,
+        "effects": [
+            {
+                "name": "happy",
+                "icon": "fas fa-smile"
+            }
+        ],
+        "image": "images/products/blue-dream.jpg"
+    }
+]

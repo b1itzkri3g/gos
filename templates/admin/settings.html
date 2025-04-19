@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings - Gift of Shiva Admin</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/admin.css') }}">
+</head>
+<body>
+    <div class="admin-wrapper">
+        <!-- Mobile Header -->
+        <header class="mobile-header">
+            <button id="mobileMenuBtn" class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="brand">
+                <i class="fas fa-cannabis"></i>
+                <span>Gift of Shiva</span>
+            </div>
+        </header>
+
+        <!-- Sidebar -->
+        <aside class="admin-sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <i class="fas fa-cannabis"></i>
+                <span>Gift of Shiva</span>
+            </div>
+            <!-- Toggle sidebar button -->
+            <button id="toggleSidebarBtn" class="toggle-sidebar-btn">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <nav class="sidebar-menu">
+                <a href="{{ url_for('admin_dashboard') }}" class="menu-item">
+                    <i class="fas fa-tachometer-alt"></i>
+                    <span>Dashboard</span>
+                </a>
+                <a href="{{ url_for('admin_dashboard') }}" class="menu-item">
+                    <i class="fas fa-boxes"></i>
+                    <span>Products</span>
+                </a>
+                <a href="{{ url_for('admin_analytics') }}" class="menu-item">
+                    <i class="fas fa-chart-line"></i>
+                    <span>Analytics</span>
+                </a>
+                <a href="{{ url_for('admin_giftboxes') }}" class="menu-item">
+                    <i class="fas fa-gift"></i>
+                    <span>Gift Boxes</span>
+                </a>
+                <a href="{{ url_for('admin_settings') }}" class="menu-item active">
+                    <i class="fas fa-cog"></i>
+                    <span>Settings</span>
+                </a>
+            </nav>
+            <div class="sidebar-footer">
+                <a href="{{ url_for('index') }}" class="menu-item">
+                    <i class="fas fa-home"></i>
+                    <span>View Website</span>
+                </a>
+                <a href="{{ url_for('logout') }}" class="menu-item">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>Logout</span>
+                </a>
+            </div>
+        </aside>
+
+        <!-- Sidebar Overlay -->
+        <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+        <!-- Main Content -->
+        <main class="admin-main" id="adminMain">
+            <div class="admin-content">
+                <!-- Top Bar -->
+                <div class="admin-topbar">
+                    <div class="topbar-left">
+                        <h1>Site Settings</h1>
+                    </div>
+                    <div class="topbar-right">
+                        <button class="theme-toggle-admin" id="adminThemeToggle" title="Toggle Dark Mode">
+                            <i class="fas fa-moon" id="adminDarkIcon"></i>
+                            <i class="fas fa-sun" id="adminLightIcon" style="display: none;"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Flash Messages -->
+                {% with messages = get_flashed_messages(with_categories=true) %}
+                    {% if messages %}
+                        {% for category, message in messages %}
+                            <div class="alert alert-{{ category }} alert-dismissible fade show" role="alert">
+                                {{ message }}
+                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                            </div>
+                        {% endfor %}
+                    {% endif %}
+                {% endwith %}
+
+                <!-- Settings Tabs -->
+                <div class="settings-tabs">
+                    <ul class="nav nav-tabs mb-4" id="settingsTabs" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="general-tab" data-bs-toggle="tab" data-bs-target="#general" type="button" role="tab" aria-controls="general" aria-selected="true">
+                                <i class="fas fa-sliders-h"></i> General
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">
+                                <i class="fas fa-address-card"></i> Contact Information
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="security-tab" data-bs-toggle="tab" data-bs-target="#security" type="button" role="tab" aria-controls="security" aria-selected="false">
+                                <i class="fas fa-shield-alt"></i> Security
+                            </button>
+                        </li>
+                    </ul>
+                    <div class="tab-content" id="settingsTabsContent">
+                        <!-- General Settings -->
+                        <div class="tab-pane fade show active" id="general" role="tabpanel" aria-labelledby="general-tab">
+                            <div class="settings-card">
+                                <form action="{{ url_for('admin_settings') }}" method="post">
+                                    <div class="mb-4">
+                                        <label for="site_name" class="form-label">Site Name</label>
+                                        <input type="text" class="form-control" id="site_name" name="site_name" value="{{ settings.site_name }}">
+                                        <div class="form-text">This is the name that appears in the header and title of your website.</div>
+                                    </div>
+                                    
+                                    <div class="mb-4">
+                                        <label for="logo" class="form-label">Logo</label>
+                                        <div class="input-group">
+                                            <input type="file" class="form-control" id="logo">
+                                            <button class="btn btn-outline-secondary" type="button">Upload</button>
+                                        </div>
+                                        <div class="form-text">Recommended size: 200x60 pixels</div>
+                                    </div>
+                                    
+                                    <div class="mb-4">
+                                        <label for="theme_color" class="form-label">Theme Color</label>
+                                        <input type="color" class="form-control form-control-color" id="theme_color" name="theme_color" value="{{ settings.theme_color }}">
+                                        <div class="form-text">Primary color for your website theme.</div>
+                                    </div>
+                                    
+                                    <button type="submit" class="btn btn-primary">Save General Settings</button>
+                                </form>
+                            </div>
+                        </div>
+                        
+                        <!-- Contact Information -->
+                        <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+                            <div class="settings-card">
+                                <form action="{{ url_for('admin_settings') }}" method="post">
+                                    <div class="mb-4">
+                                        <label for="contact_email" class="form-label">Email Address</label>
+                                        <input type="email" class="form-control" id="contact_email" name="contact_email" value="{{ settings.contact_email }}">
+                                    </div>
+                                    
+                                    <div class="mb-4">
+                                        <label for="contact_phone" class="form-label">Phone Number</label>
+                                        <input type="text" class="form-control" id="contact_phone" name="contact_phone" value="{{ settings.contact_phone }}">
+                                    </div>
+                                    
+                                    <div class="mb-4">
+                                        <label for="contact_address" class="form-label">Address</label>
+                                        <textarea class="form-control" id="contact_address" name="contact_address" rows="3">{{ settings.contact_address }}</textarea>
+                                    </div>
+                                    
+                                    <div class="mb-4">
+                                        <label for="telegram_username" class="form-label">Telegram Username</label>
+                                        <div class="input-group">
+                                            <span class="input-group-text">@</span>
+                                            <input type="text" class="form-control" id="telegram_username" name="telegram_username" value="{{ settings.telegram_username[1:] if settings.telegram_username.startswith('@') else settings.telegram_username }}">
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="mb-4">
+                                        <h5 class="mb-3">Delivery Fees by Township</h5>
+                                        <div class="delivery-fees-container">
+                                            {% for fee in settings.delivery_fees %}
+                                            <div class="row delivery-fee-row mb-2">
+                                                <div class="col-md-6">
+                                                    <input type="text" class="form-control" name="township[]" placeholder="Township Name" value="{{ fee.township }}">
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <input type="text" class="form-control" name="fee[]" placeholder="Fee" value="{{ fee.fee }}">
+                                                </div>
+                                                <div class="col-md-2">
+                                                    <button type="button" class="btn btn-outline-danger w-100 remove-fee-btn"><i class="fas fa-trash"></i></button>
+                                                </div>
+                                            </div>
+                                            {% endfor %}
+                                            {% if not settings.delivery_fees %}
+                                            <div class="row delivery-fee-row mb-2">
+                                                <div class="col-md-6">
+                                                    <input type="text" class="form-control" name="township[]" placeholder="Township Name">
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <input type="text" class="form-control" name="fee[]" placeholder="Fee">
+                                                </div>
+                                                <div class="col-md-2">
+                                                    <button type="button" class="btn btn-outline-danger w-100 remove-fee-btn"><i class="fas fa-trash"></i></button>
+                                                </div>
+                                            </div>
+                                            {% endif %}
+                                        </div>
+                                        <button type="button" class="btn btn-outline-primary mt-2" id="addDeliveryFeeBtn">
+                                            <i class="fas fa-plus"></i> Add Township
+                                        </button>
+                                    </div>
+                                    
+                                    <button type="submit" class="btn btn-primary">Save Contact Information</button>
+                                </form>
+                            </div>
+                        </div>
+                        
+                        <!-- Security Settings -->
+                        <div class="tab-pane fade" id="security" role="tabpanel" aria-labelledby="security-tab">
+                            <div class="settings-card">
+                                <form action="{{ url_for('admin_settings') }}" method="post">
+                                    <div class="mb-4">
+                                        <label for="current_password" class="form-label">Current Password</label>
+                                        <input type="password" class="form-control" id="current_password" name="current_password">
+                                    </div>
+                                    
+                                    <div class="mb-4">
+                                        <label for="new_password" class="form-label">New Password</label>
+                                        <input type="password" class="form-control" id="new_password" name="new_password">
+                                    </div>
+                                    
+                                    <div class="mb-4">
+                                        <label for="confirm_password" class="form-label">Confirm New Password</label>
+                                        <input type="password" class="form-control" id="confirm_password" name="confirm_password">
+                                    </div>
+                                    
+                                    <button type="submit" class="btn btn-primary">Change Password</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{{ url_for('static', filename='js/theme.js') }}"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile sidebar toggle
+            const sidebarOverlay = document.getElementById('sidebarOverlay');
+            const sidebar = document.getElementById('sidebar');
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            
+            mobileMenuBtn.addEventListener('click', function() {
+                sidebar.classList.add('open');
+                sidebarOverlay.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            });
+            
+            sidebarOverlay.addEventListener('click', function() {
+                sidebar.classList.remove('open');
+                sidebarOverlay.classList.remove('active');
+                document.body.style.overflow = '';
+            });
+            
+            // Toggle sidebar button
+            const toggleSidebarBtn = document.getElementById('toggleSidebarBtn');
+            const adminMain = document.getElementById('adminMain');
+            
+            toggleSidebarBtn.addEventListener('click', function() {
+                sidebar.classList.toggle('collapsed');
+                adminMain.classList.toggle('expanded');
+                
+                // Change the icon
+                const icon = toggleSidebarBtn.querySelector('i');
+                if (sidebar.classList.contains('collapsed')) {
+                    icon.classList.remove('fa-chevron-left');
+                    icon.classList.add('fa-chevron-right');
+                } else {
+                    icon.classList.remove('fa-chevron-right');
+                    icon.classList.add('fa-chevron-left');
+                }
+            });
+            
+            // Add delivery fee row
+            document.getElementById('addDeliveryFeeBtn').addEventListener('click', function() {
+                const container = document.querySelector('.delivery-fees-container');
+                const newRow = document.createElement('div');
+                newRow.className = 'row delivery-fee-row mb-2';
+                newRow.innerHTML = `
+                    <div class="col-md-6">
+                        <input type="text" class="form-control" name="township[]" placeholder="Township Name">
+                    </div>
+                    <div class="col-md-4">
+                        <input type="text" class="form-control" name="fee[]" placeholder="Fee">
+                    </div>
+                    <div class="col-md-2">
+                        <button type="button" class="btn btn-outline-danger w-100 remove-fee-btn"><i class="fas fa-trash"></i></button>
+                    </div>
+                `;
+                
+                container.appendChild(newRow);
+                
+                // Add event listener to delete button
+                newRow.querySelector('.remove-fee-btn').addEventListener('click', function() {
+                    container.removeChild(newRow);
+                });
+            });
+            
+            // Add event listeners to existing delete buttons
+            document.querySelectorAll('.remove-fee-btn').forEach(button => {
+                button.addEventListener('click', function() {
+                    const row = this.closest('.delivery-fee-row');
+                    row.parentNode.removeChild(row);
+                });
+            });
+            
+            // Activate tab based on hash in URL
+            const hash = window.location.hash;
+            if (hash) {
+                const tabId = hash.replace('#', '');
+                const tab = document.querySelector(`#settingsTabs button[data-bs-target="#${tabId}"]`);
+                if (tab) {
+                    const bsTab = new bootstrap.Tab(tab);
+                    bsTab.show();
+                }
+            }
+            
+            // Update URL hash when tab is changed
+            document.querySelectorAll('#settingsTabs button').forEach(tab => {
+                tab.addEventListener('shown.bs.tab', function (e) {
+                    const target = e.target.getAttribute('data-bs-target');
+                    if (target) {
+                        window.location.hash = target.replace('#', '');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html> 
