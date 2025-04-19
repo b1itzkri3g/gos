@@ -1,0 +1,722 @@
+[
+    {
+        "timestamp": "2025-03-24T01:36:08.546073+06:30",
+        "path": "admin_settings",
+        "visitor_id": "a4408293e2e6c5cb7fc43b84f023193c",
+        "referrer": "http://192.168.100.26:5000/admin/settings"
+    },
+    {
+        "timestamp": "2025-03-24T01:36:31.881082+06:30",
+        "path": "admin_dashboard",
+        "visitor_id": "a4408293e2e6c5cb7fc43b84f023193c",
+        "referrer": "http://192.168.100.26:5000/admin/analytics"
+    },
+    {
+        "timestamp": "2025-03-24T01:40:40.790041+06:30",
+        "path": "admin_dashboard",
+        "visitor_id": "a4408293e2e6c5cb7fc43b84f023193c",
+        "referrer": "http://192.168.100.26:5000/admin/dashboard"
+    },
+    {
+        "timestamp": "2025-03-24T01:40:48.701343+06:30",
+        "path": "admin_dashboard",
+        "visitor_id": "a4408293e2e6c5cb7fc43b84f023193c",
+        "referrer": "direct"
+    },
+    {
+        "timestamp": "2025-03-24T01:41:19.394636+06:30",
+        "path": "admin_dashboard",
+        "visitor_id": "a4408293e2e6c5cb7fc43b84f023193c",
+        "referrer": "direct"
+    },
+    {
+        "timestamp": "2025-03-24T01:41:49.394598+06:30",
+        "path": "admin_dashboard",
+        "visitor_id": "a4408293e2e6c5cb7fc43b84f023193c",
+        "referrer": "http://192.168.100.26:5000/admin/dashboard"
+    },
+    {
+        "timestamp": "2025-03-24T01:41:53.196006+06:30",
+        "path": "admin_dashboard",
+        "visitor_id": "a4408293e2e6c5cb7fc43b84f023193c",
+        "referrer": "http://192.168.100.26:5000/admin/dashboard?id=&name=asdf&type=Sativa&thc=asdf&price=1333&status=Active&rating=4.5&description=asdf&effects=asdf&image=Screenshot_2025-02-11_10-44-40.png"
+    },
+    {
+        "timestamp": "2025-03-24T01:42:03.203384+06:30",
+        "path": "admin_dashboard",
+        "visitor_id": "a4408293e2e6c5cb7fc43b84f023193c",
+        "referrer": "http://192.168.100.26:5000/admin/dashboard"
+    },
+    {
+        "timestamp": "2025-03-24T01:43:14.253365+06:30",
+        "path": "admin_giftboxes",
+        "visitor_id": "a4408293e2e6c5cb7fc43b84f023193c",
+        "referrer": "http://192.168.100.26:5000/admin/analytics"
+    },
+    {
+        "timestamp": "2025-03-24T01:44:07.655472+06:30",
+        "path": "admin_dashboard",
+        "visitor_id": "a4408293e2e6c5cb7fc43b84f023193c",
+        "referrer": "http://192.168.100.26:5000/admin/analytics"
+    },
+    {
+        "timestamp": "2025-03-24T01:45:20.738215+06:30",
+        "path": "admin_dashboard",
+        "visitor_id": "a4408293e2e6c5cb7fc43b84f023193c",
+        "referrer": "http://192.168.100.26:5000/admin/analytics"
+    },
+    {
+        "timestamp": "2025-03-24T01:48:04.777517+06:30",
+        "path": "admin_dashboard",
+        "visitor_id": "a4408293e2e6c5cb7fc43b84f023193c",
+        "referrer": "direct"
+    },
+    {
+        "timestamp": "2025-03-24T01:48:24.203347+06:30",
+        "path": "home",
+        "visitor_id": "a4408293e2e6c5cb7fc43b84f023193c",
+        "referrer": "http://192.168.100.26:5000/"
+    },
+    {
+        "timestamp": "2025-03-24T01:49:05.896220+06:30",
+        "path": "admin_dashboard",
+        "visitor_id": "a4408293e2e6c5cb7fc43b84f023193c",
+        "referrer": "http://192.168.100.26:5000/admin/dashboard"
+    },
+    {
+        "timestamp": "2025-03-24T01:49:09.996106+06:30",
+        "path": "admin_dashboard",
+        "visitor_id": "a4408293e2e6c5cb7fc43b84f023193c",
+        "referrer": "http://192.168.100.26:5000/admin/dashboard?id=&csrf_token=IjYzN2IxMzQ5NWE0N2ZkZTZjMjQ1NTk3Y2UxMTZjYTc5YWQ3MjE2ZTAi.Z-BebA.l55Ntwmyylq1-reSZdjGx9a8uto&name=asdf&type=Sativa&thc=12&price=1212&status=Active&rating=4.5&description=asdf&effects=asdf&image=Screenshot_2025-02-11_10-42-43.png"
+    },
+    {
+        "timestamp": "2025-03-24T01:49:35.433211+06:30",
+        "path": "admin_giftboxes",
+        "visitor_id": "a4408293e2e6c5cb7fc43b84f023193c",
+        "referrer": "http://192.168.100.26:5000/admin/dashboard"
+    },
+    {
+        "timestamp": "2025-03-24T01:50:12.496190+06:30",
+        "path": "admin_giftboxes",
+        "visitor_id": "a4408293e2e6c5cb7fc43b84f023193c",
+        "referrer": "http://192.168.100.26:5000/admin/giftboxes"
+    },
+    {
+        "timestamp": "2025-03-24T01:50:12.517269+06:30",
+        "path": "admin_giftboxes",
+        "visitor_id": "a4408293e2e6c5cb7fc43b84f023193c",
+        "referrer": "http://192.168.100.26:5000/admin/giftboxes"
+    },
+    {
+        "timestamp": "2025-03-24T01:50:19.676406+06:30",
+        "path": "home",
+        "visitor_id": "a4408293e2e6c5cb7fc43b84f023193c",
+        "referrer": "direct"
+    },
+    {
+        "timestamp": "2025-03-24T01:50:31.301288+06:30",
+        "path": "home",
+        "visitor_id": "a4408293e2e6c5cb7fc43b84f023193c",
+        "referrer": "direct"
+    },
+    {
+        "timestamp": "2025-03-24T01:50:56.296849+06:30",
+        "path": "home",
+        "visitor_id": "a4408293e2e6c5cb7fc43b84f023193c",
+        "referrer": "direct"
+    },
+    {
+        "timestamp": "2025-03-24T01:51:55.845899+06:30",
+        "path": "home",
+        "visitor_id": "a4408293e2e6c5cb7fc43b84f023193c",
+        "referrer": "http://192.168.100.26:5000/"
+    },
+    {
+        "timestamp": "2025-03-24T01:54:05.808122+06:30",
+        "path": "home",
+        "visitor_id": "a4408293e2e6c5cb7fc43b84f023193c",
+        "referrer": "http://192.168.100.26:5000/"
+    },
+    {
+        "timestamp": "2025-03-24T01:55:38.971762+06:30",
+        "path": "home",
+        "visitor_id": "a4408293e2e6c5cb7fc43b84f023193c",
+        "referrer": "direct"
+    },
+    {
+        "timestamp": "2025-03-24T01:55:54.291247+06:30",
+        "path": "admin_dashboard",
+        "visitor_id": "a4408293e2e6c5cb7fc43b84f023193c",
+        "referrer": "http://192.168.100.26:5000/admin/giftboxes"
+    },
+    {
+        "timestamp": "2025-03-24T01:56:56.240007+06:30",
+        "path": "admin_giftboxes",
+        "visitor_id": "a4408293e2e6c5cb7fc43b84f023193c",
+        "referrer": "http://192.168.100.26:5000/admin/dashboard"
+    },
+    {
+        "timestamp": "2025-03-24T01:57:49.468514+06:30",
+        "path": "admin_dashboard",
+        "visitor_id": "a4408293e2e6c5cb7fc43b84f023193c",
+        "referrer": "http://192.168.100.26:5000/admin/analytics"
+    },
+    {
+        "timestamp": "2025-03-24T01:58:49.439163+06:30",
+        "path": "admin_dashboard",
+        "visitor_id": "a4408293e2e6c5cb7fc43b84f023193c",
+        "referrer": "direct"
+    },
+    {
+        "timestamp": "2025-03-24T02:00:45.711133+06:30",
+        "path": "admin_dashboard",
+        "visitor_id": "a4408293e2e6c5cb7fc43b84f023193c",
+        "referrer": "http://192.168.100.26:5000/admin/dashboard"
+    },
+    {
+        "timestamp": "2025-03-24T02:00:48.365620+06:30",
+        "path": "admin_dashboard",
+        "visitor_id": "a4408293e2e6c5cb7fc43b84f023193c",
+        "referrer": "http://192.168.100.26:5000/admin/dashboard"
+    },
+    {
+        "timestamp": "2025-03-24T02:01:26.096250+06:30",
+        "path": "add_product_1",
+        "visitor_id": "a4408293e2e6c5cb7fc43b84f023193c",
+        "referrer": "http://192.168.100.26:5000/admin/dashboard"
+    },
+    {
+        "timestamp": "2025-03-24T02:01:27.122234+06:30",
+        "path": "admin_dashboard",
+        "visitor_id": "a4408293e2e6c5cb7fc43b84f023193c",
+        "referrer": "http://192.168.100.26:5000/admin/dashboard"
+    },
+    {
+        "timestamp": "2025-03-24T02:01:38.133788+06:30",
+        "path": "home",
+        "visitor_id": "a4408293e2e6c5cb7fc43b84f023193c",
+        "referrer": "direct"
+    },
+    {
+        "timestamp": "2025-03-24T02:02:53.892286+06:30",
+        "path": "admin_dashboard",
+        "visitor_id": "a4408293e2e6c5cb7fc43b84f023193c",
+        "referrer": "direct"
+    },
+    {
+        "timestamp": "2025-03-24T02:04:13.584530+06:30",
+        "path": "admin_dashboard",
+        "visitor_id": "a4408293e2e6c5cb7fc43b84f023193c",
+        "referrer": "direct"
+    },
+    {
+        "timestamp": "2025-03-24T02:04:38.536469+06:30",
+        "path": "admin_dashboard",
+        "visitor_id": "a4408293e2e6c5cb7fc43b84f023193c",
+        "referrer": "http://192.168.100.26:5000/admin/dashboard"
+    },
+    {
+        "timestamp": "2025-03-24T02:04:51.632549+06:30",
+        "path": "home",
+        "visitor_id": "a4408293e2e6c5cb7fc43b84f023193c",
+        "referrer": "direct"
+    },
+    {
+        "timestamp": "2025-03-24T02:04:59.267007+06:30",
+        "path": "home",
+        "visitor_id": "a4408293e2e6c5cb7fc43b84f023193c",
+        "referrer": "direct"
+    },
+    {
+        "timestamp": "2025-03-24T02:05:06.016919+06:30",
+        "path": "admin_dashboard",
+        "visitor_id": "a4408293e2e6c5cb7fc43b84f023193c",
+        "referrer": "http://192.168.100.26:5000/admin/analytics"
+    },
+    {
+        "timestamp": "2025-03-24T02:05:17.847118+06:30",
+        "path": "admin_dashboard",
+        "visitor_id": "a4408293e2e6c5cb7fc43b84f023193c",
+        "referrer": "http://192.168.100.26:5000/admin/dashboard"
+    },
+    {
+        "timestamp": "2025-03-24T02:09:27.175184+06:30",
+        "path": "home",
+        "visitor_id": "a4408293e2e6c5cb7fc43b84f023193c",
+        "referrer": "direct"
+    },
+    {
+        "timestamp": "2025-03-24T02:11:53.869855+06:30",
+        "path": "home",
+        "visitor_id": "a4408293e2e6c5cb7fc43b84f023193c",
+        "referrer": "direct"
+    },
+    {
+        "timestamp": "2025-03-24T02:15:02.189157+06:30",
+        "path": "home",
+        "visitor_id": "a4408293e2e6c5cb7fc43b84f023193c",
+        "referrer": "direct"
+    },
+    {
+        "timestamp": "2025-03-24T02:16:48.554989+06:30",
+        "path": "admin_dashboard",
+        "visitor_id": "a4408293e2e6c5cb7fc43b84f023193c",
+        "referrer": "http://192.168.100.26:5000/admin/dashboard?id=&csrf_token=%3Cfunction+generate_csrf+at+0x7fc36dfd1120%3E&name=asdf&type=Sativa&thc=asdf&price=123&status=Active&rating=4.5&description=asdf&effects=&image="
+    },
+    {
+        "timestamp": "2025-03-24T02:19:52.194905+06:30",
+        "path": "admin_dashboard",
+        "visitor_id": "a4408293e2e6c5cb7fc43b84f023193c",
+        "referrer": "http://192.168.100.26:5000/admin/dashboard?id=&csrf_token=%3Cfunction+generate_csrf+at+0x7fc36dfd1120%3E&name=asdfasdf&type=Sativa&thc=12&price=12312312&status=Active&rating=4.5&description=asdf&effects=asdf&image="
+    },
+    {
+        "timestamp": "2025-03-24T02:22:12.857304+06:30",
+        "path": "admin_giftboxes",
+        "visitor_id": "a4408293e2e6c5cb7fc43b84f023193c",
+        "referrer": "http://192.168.100.26:5000/admin/dashboard"
+    },
+    {
+        "timestamp": "2025-03-24T02:23:12.353108+06:30",
+        "path": "admin_giftboxes",
+        "visitor_id": "a4408293e2e6c5cb7fc43b84f023193c",
+        "referrer": "direct"
+    },
+    {
+        "timestamp": "2025-03-24T02:25:47.078458+06:30",
+        "path": "admin_giftboxes",
+        "visitor_id": "a4408293e2e6c5cb7fc43b84f023193c",
+        "referrer": "direct"
+    },
+    {
+        "timestamp": "2025-03-24T02:26:15.361158+06:30",
+        "path": "admin_giftboxes",
+        "visitor_id": "a4408293e2e6c5cb7fc43b84f023193c",
+        "referrer": "http://192.168.100.26:5000/admin/giftboxes"
+    },
+    {
+        "timestamp": "2025-03-24T02:26:37.323869+06:30",
+        "path": "admin_giftboxes",
+        "visitor_id": "a4408293e2e6c5cb7fc43b84f023193c",
+        "referrer": "http://192.168.100.26:5000/admin/giftboxes"
+    },
+    {
+        "timestamp": "2025-03-24T02:26:37.349716+06:30",
+        "path": "admin_giftboxes",
+        "visitor_id": "a4408293e2e6c5cb7fc43b84f023193c",
+        "referrer": "http://192.168.100.26:5000/admin/giftboxes"
+    },
+    {
+        "timestamp": "2025-03-24T02:26:43.099032+06:30",
+        "path": "home",
+        "visitor_id": "a4408293e2e6c5cb7fc43b84f023193c",
+        "referrer": "direct"
+    },
+    {
+        "timestamp": "2025-03-24T02:27:00.038814+06:30",
+        "path": "admin_giftboxes",
+        "visitor_id": "a4408293e2e6c5cb7fc43b84f023193c",
+        "referrer": "direct"
+    },
+    {
+        "timestamp": "2025-03-24T02:27:03.752764+06:30",
+        "path": "home",
+        "visitor_id": "a4408293e2e6c5cb7fc43b84f023193c",
+        "referrer": "direct"
+    },
+    {
+        "timestamp": "2025-03-24T02:27:07.497235+06:30",
+        "path": "claim_giftbox_53a593cd-017e-442e-a3b7-ecee18e6e2ba",
+        "visitor_id": "a4408293e2e6c5cb7fc43b84f023193c",
+        "referrer": "http://192.168.100.26:5000/"
+    },
+    {
+        "timestamp": "2025-03-24T02:27:15.892154+06:30",
+        "path": "admin_giftboxes",
+        "visitor_id": "a4408293e2e6c5cb7fc43b84f023193c",
+        "referrer": "direct"
+    },
+    {
+        "timestamp": "2025-03-24T02:27:23.670034+06:30",
+        "path": "admin_giftboxes",
+        "visitor_id": "a4408293e2e6c5cb7fc43b84f023193c",
+        "referrer": "http://192.168.100.26:5000/admin/giftboxes"
+    },
+    {
+        "timestamp": "2025-03-24T02:27:25.470740+06:30",
+        "path": "admin_dashboard",
+        "visitor_id": "a4408293e2e6c5cb7fc43b84f023193c",
+        "referrer": "http://192.168.100.26:5000/admin/giftboxes"
+    },
+    {
+        "timestamp": "2025-03-24T02:29:43.838276+06:30",
+        "path": "admin_dashboard",
+        "visitor_id": "a4408293e2e6c5cb7fc43b84f023193c",
+        "referrer": "direct"
+    },
+    {
+        "timestamp": "2025-03-24T02:30:07.431356+06:30",
+        "path": "admin_dashboard",
+        "visitor_id": "a4408293e2e6c5cb7fc43b84f023193c",
+        "referrer": "direct"
+    },
+    {
+        "timestamp": "2025-03-24T02:30:09.754789+06:30",
+        "path": "get_product_2",
+        "visitor_id": "a4408293e2e6c5cb7fc43b84f023193c",
+        "referrer": "http://192.168.100.26:5000/admin/dashboard"
+    },
+    {
+        "timestamp": "2025-03-24T02:30:17.870970+06:30",
+        "path": "edit_product_2",
+        "visitor_id": "a4408293e2e6c5cb7fc43b84f023193c",
+        "referrer": "http://192.168.100.26:5000/admin/dashboard"
+    },
+    {
+        "timestamp": "2025-03-24T02:30:18.905568+06:30",
+        "path": "admin_dashboard",
+        "visitor_id": "a4408293e2e6c5cb7fc43b84f023193c",
+        "referrer": "direct"
+    },
+    {
+        "timestamp": "2025-03-24T02:30:38.541997+06:30",
+        "path": "add_product_3",
+        "visitor_id": "a4408293e2e6c5cb7fc43b84f023193c",
+        "referrer": "http://192.168.100.26:5000/admin/dashboard"
+    },
+    {
+        "timestamp": "2025-03-24T02:30:39.575684+06:30",
+        "path": "admin_dashboard",
+        "visitor_id": "a4408293e2e6c5cb7fc43b84f023193c",
+        "referrer": "direct"
+    },
+    {
+        "timestamp": "2025-03-24T02:30:46.176752+06:30",
+        "path": "home",
+        "visitor_id": "a4408293e2e6c5cb7fc43b84f023193c",
+        "referrer": "direct"
+    },
+    {
+        "timestamp": "2025-03-24T02:34:34.249545+06:30",
+        "path": "home",
+        "visitor_id": "a4408293e2e6c5cb7fc43b84f023193c",
+        "referrer": "direct"
+    },
+    {
+        "timestamp": "2025-03-24T02:35:07.193368+06:30",
+        "path": "home",
+        "visitor_id": "a4408293e2e6c5cb7fc43b84f023193c",
+        "referrer": "direct"
+    },
+    {
+        "timestamp": "2025-03-24T02:37:59.860307+06:30",
+        "path": "home",
+        "visitor_id": "a4408293e2e6c5cb7fc43b84f023193c",
+        "referrer": "direct"
+    },
+    {
+        "timestamp": "2025-03-24T02:38:05.890550+06:30",
+        "path": "product_1",
+        "visitor_id": "a4408293e2e6c5cb7fc43b84f023193c",
+        "referrer": "http://192.168.100.26:5000/"
+    },
+    {
+        "timestamp": "2025-03-24T02:38:20.499983+06:30",
+        "path": "product_2",
+        "visitor_id": "a4408293e2e6c5cb7fc43b84f023193c",
+        "referrer": "http://192.168.100.26:5000/"
+    },
+    {
+        "timestamp": "2025-03-24T02:38:32.500230+06:30",
+        "path": "admin_settings",
+        "visitor_id": "a4408293e2e6c5cb7fc43b84f023193c",
+        "referrer": "http://192.168.100.26:5000/admin/dashboard"
+    },
+    {
+        "timestamp": "2025-03-24T02:39:40.031697+06:30",
+        "path": "admin_settings",
+        "visitor_id": "a4408293e2e6c5cb7fc43b84f023193c",
+        "referrer": "http://192.168.100.26:5000/admin/settings"
+    },
+    {
+        "timestamp": "2025-03-24T02:39:40.078516+06:30",
+        "path": "admin_settings",
+        "visitor_id": "a4408293e2e6c5cb7fc43b84f023193c",
+        "referrer": "http://192.168.100.26:5000/admin/settings"
+    },
+    {
+        "timestamp": "2025-03-24T02:41:38.205532+06:30",
+        "path": "admin_settings",
+        "visitor_id": "a4408293e2e6c5cb7fc43b84f023193c",
+        "referrer": "http://192.168.100.26:5000/admin/settings"
+    },
+    {
+        "timestamp": "2025-03-24T02:41:38.236997+06:30",
+        "path": "admin_settings",
+        "visitor_id": "a4408293e2e6c5cb7fc43b84f023193c",
+        "referrer": "http://192.168.100.26:5000/admin/settings"
+    },
+    {
+        "timestamp": "2025-03-24T02:43:26.781387+06:30",
+        "path": "admin_settings",
+        "visitor_id": "a4408293e2e6c5cb7fc43b84f023193c",
+        "referrer": "http://192.168.100.26:5000/admin/settings"
+    },
+    {
+        "timestamp": "2025-03-24T02:43:26.796902+06:30",
+        "path": "admin_settings",
+        "visitor_id": "a4408293e2e6c5cb7fc43b84f023193c",
+        "referrer": "http://192.168.100.26:5000/admin/settings"
+    },
+    {
+        "timestamp": "2025-03-24T02:43:31.616148+06:30",
+        "path": "home",
+        "visitor_id": "a4408293e2e6c5cb7fc43b84f023193c",
+        "referrer": "direct"
+    },
+    {
+        "timestamp": "2025-03-24T02:44:14.957087+06:30",
+        "path": "admin_settings",
+        "visitor_id": "a4408293e2e6c5cb7fc43b84f023193c",
+        "referrer": "http://192.168.100.26:5000/admin/settings"
+    },
+    {
+        "timestamp": "2025-03-24T02:44:14.987934+06:30",
+        "path": "admin_settings",
+        "visitor_id": "a4408293e2e6c5cb7fc43b84f023193c",
+        "referrer": "http://192.168.100.26:5000/admin/settings"
+    },
+    {
+        "timestamp": "2025-03-24T02:44:21.238656+06:30",
+        "path": "home",
+        "visitor_id": "a4408293e2e6c5cb7fc43b84f023193c",
+        "referrer": "direct"
+    },
+    {
+        "timestamp": "2025-03-24T02:44:26.189654+06:30",
+        "path": "product_1",
+        "visitor_id": "a4408293e2e6c5cb7fc43b84f023193c",
+        "referrer": "http://192.168.100.26:5000/"
+    },
+    {
+        "timestamp": "2025-03-24T02:48:46.162912+06:30",
+        "path": "home",
+        "visitor_id": "a4408293e2e6c5cb7fc43b84f023193c",
+        "referrer": "direct"
+    },
+    {
+        "timestamp": "2025-03-24T02:51:11.288789+06:30",
+        "path": "home",
+        "visitor_id": "a4408293e2e6c5cb7fc43b84f023193c",
+        "referrer": "direct"
+    },
+    {
+        "timestamp": "2025-03-24T02:51:32.345049+06:30",
+        "path": "product_1",
+        "visitor_id": "a4408293e2e6c5cb7fc43b84f023193c",
+        "referrer": "http://192.168.100.26:5000/"
+    },
+    {
+        "timestamp": "2025-03-24T02:51:32.509940+06:30",
+        "path": "product_1",
+        "visitor_id": "a4408293e2e6c5cb7fc43b84f023193c",
+        "referrer": "http://192.168.100.26:5000/"
+    },
+    {
+        "timestamp": "2025-03-24T02:51:34.409416+06:30",
+        "path": "product_2",
+        "visitor_id": "a4408293e2e6c5cb7fc43b84f023193c",
+        "referrer": "http://192.168.100.26:5000/"
+    },
+    {
+        "timestamp": "2025-03-24T02:51:35.492984+06:30",
+        "path": "product_2",
+        "visitor_id": "a4408293e2e6c5cb7fc43b84f023193c",
+        "referrer": "http://192.168.100.26:5000/"
+    },
+    {
+        "timestamp": "2025-03-24T02:51:36.451952+06:30",
+        "path": "product_2",
+        "visitor_id": "a4408293e2e6c5cb7fc43b84f023193c",
+        "referrer": "http://192.168.100.26:5000/"
+    },
+    {
+        "timestamp": "2025-03-24T02:51:37.455988+06:30",
+        "path": "product_3",
+        "visitor_id": "a4408293e2e6c5cb7fc43b84f023193c",
+        "referrer": "http://192.168.100.26:5000/"
+    },
+    {
+        "timestamp": "2025-03-24T02:51:38.358343+06:30",
+        "path": "product_3",
+        "visitor_id": "a4408293e2e6c5cb7fc43b84f023193c",
+        "referrer": "http://192.168.100.26:5000/"
+    },
+    {
+        "timestamp": "2025-03-24T02:51:42.323248+06:30",
+        "path": "product_1",
+        "visitor_id": "a4408293e2e6c5cb7fc43b84f023193c",
+        "referrer": "http://192.168.100.26:5000/"
+    },
+    {
+        "timestamp": "2025-03-24T02:51:43.189993+06:30",
+        "path": "product_1",
+        "visitor_id": "a4408293e2e6c5cb7fc43b84f023193c",
+        "referrer": "http://192.168.100.26:5000/"
+    },
+    {
+        "timestamp": "2025-03-24T02:51:54.388318+06:30",
+        "path": "product_1",
+        "visitor_id": "a4408293e2e6c5cb7fc43b84f023193c",
+        "referrer": "http://192.168.100.26:5000/"
+    },
+    {
+        "timestamp": "2025-03-24T02:59:28.576031+06:30",
+        "path": "home",
+        "visitor_id": "a4408293e2e6c5cb7fc43b84f023193c",
+        "referrer": "direct"
+    },
+    {
+        "timestamp": "2025-03-24T02:59:34.372494+06:30",
+        "path": "product_1",
+        "visitor_id": "a4408293e2e6c5cb7fc43b84f023193c",
+        "referrer": "http://192.168.100.26:5000/"
+    },
+    {
+        "timestamp": "2025-03-24T02:59:35.481672+06:30",
+        "path": "product_1",
+        "visitor_id": "a4408293e2e6c5cb7fc43b84f023193c",
+        "referrer": "http://192.168.100.26:5000/"
+    },
+    {
+        "timestamp": "2025-03-24T03:01:50.253278+06:30",
+        "path": "home",
+        "visitor_id": "a4408293e2e6c5cb7fc43b84f023193c",
+        "referrer": "direct"
+    },
+    {
+        "timestamp": "2025-03-24T03:01:55.960295+06:30",
+        "path": "product_1",
+        "visitor_id": "a4408293e2e6c5cb7fc43b84f023193c",
+        "referrer": "http://192.168.100.26:5000/"
+    },
+    {
+        "timestamp": "2025-03-24T03:02:32.605685+06:30",
+        "path": "home",
+        "visitor_id": "a4408293e2e6c5cb7fc43b84f023193c",
+        "referrer": "direct"
+    },
+    {
+        "timestamp": "2025-03-24T03:02:37.157676+06:30",
+        "path": "product_2",
+        "visitor_id": "a4408293e2e6c5cb7fc43b84f023193c",
+        "referrer": "http://192.168.100.26:5000/"
+    },
+    {
+        "timestamp": "2025-03-24T03:03:48.499516+06:30",
+        "path": "home",
+        "visitor_id": "a4408293e2e6c5cb7fc43b84f023193c",
+        "referrer": "direct"
+    },
+    {
+        "timestamp": "2025-03-24T03:03:53.612692+06:30",
+        "path": "product_2",
+        "visitor_id": "a4408293e2e6c5cb7fc43b84f023193c",
+        "referrer": "http://192.168.100.26:5000/"
+    },
+    {
+        "timestamp": "2025-03-24T03:04:05.280931+06:30",
+        "path": "admin_dashboard",
+        "visitor_id": "a4408293e2e6c5cb7fc43b84f023193c",
+        "referrer": "http://192.168.100.26:5000/admin/analytics"
+    },
+    {
+        "timestamp": "2025-03-24T03:04:09.688892+06:30",
+        "path": "delete_product_3",
+        "visitor_id": "a4408293e2e6c5cb7fc43b84f023193c",
+        "referrer": "http://192.168.100.26:5000/admin/dashboard"
+    },
+    {
+        "timestamp": "2025-03-24T03:04:17.146781+06:30",
+        "path": "delete_product_3",
+        "visitor_id": "a4408293e2e6c5cb7fc43b84f023193c",
+        "referrer": "http://192.168.100.26:5000/admin/dashboard"
+    },
+    {
+        "timestamp": "2025-03-24T03:08:33.002267+06:30",
+        "path": "admin_login_page",
+        "visitor_id": "a4408293e2e6c5cb7fc43b84f023193c",
+        "referrer": "direct"
+    },
+    {
+        "timestamp": "2025-03-24T03:10:13.766020+06:30",
+        "path": "admin_login_page",
+        "visitor_id": "a4408293e2e6c5cb7fc43b84f023193c",
+        "referrer": "direct"
+    },
+    {
+        "timestamp": "2025-03-24T03:10:24.552333+06:30",
+        "path": "admin_login_success",
+        "visitor_id": "a4408293e2e6c5cb7fc43b84f023193c",
+        "referrer": "http://192.168.100.26:5000/admin/login"
+    },
+    {
+        "timestamp": "2025-03-24T03:10:24.657220+06:30",
+        "path": "admin_dashboard",
+        "visitor_id": "a4408293e2e6c5cb7fc43b84f023193c",
+        "referrer": "http://192.168.100.26:5000/admin/login"
+    },
+    {
+        "timestamp": "2025-03-24T03:10:30.928233+06:30",
+        "path": "delete_product_3",
+        "visitor_id": "a4408293e2e6c5cb7fc43b84f023193c",
+        "referrer": "http://192.168.100.26:5000/admin/dashboard"
+    },
+    {
+        "timestamp": "2025-03-24T03:10:31.964825+06:30",
+        "path": "admin_dashboard",
+        "visitor_id": "a4408293e2e6c5cb7fc43b84f023193c",
+        "referrer": "http://192.168.100.26:5000/admin/login"
+    },
+    {
+        "timestamp": "2025-03-24T03:10:34.320613+06:30",
+        "path": "admin_dashboard",
+        "visitor_id": "a4408293e2e6c5cb7fc43b84f023193c",
+        "referrer": "http://192.168.100.26:5000/admin/dashboard"
+    },
+    {
+        "timestamp": "2025-03-24T03:10:39.852023+06:30",
+        "path": "admin_dashboard",
+        "visitor_id": "a4408293e2e6c5cb7fc43b84f023193c",
+        "referrer": "http://192.168.100.26:5000/admin/analytics"
+    },
+    {
+        "timestamp": "2025-03-24T03:10:49.349007+06:30",
+        "path": "home",
+        "visitor_id": "a4408293e2e6c5cb7fc43b84f023193c",
+        "referrer": "http://192.168.100.26:5000/"
+    },
+    {
+        "timestamp": "2025-03-24T03:10:54.525808+06:30",
+        "path": "product_1",
+        "visitor_id": "a4408293e2e6c5cb7fc43b84f023193c",
+        "referrer": "http://192.168.100.26:5000/"
+    },
+    {
+        "timestamp": "2025-04-19T08:35:56.607554+06:30",
+        "path": "home",
+        "visitor_id": "e83f5df6b9c63296f64790426e2c8e62",
+        "referrer": "direct"
+    },
+    {
+        "timestamp": "2025-04-19T08:36:08.524988+06:30",
+        "path": "home",
+        "visitor_id": "e83f5df6b9c63296f64790426e2c8e62",
+        "referrer": "direct"
+    },
+    {
+        "timestamp": "2025-04-19T08:36:34.559102+06:30",
+        "path": "product_1",
+        "visitor_id": "e83f5df6b9c63296f64790426e2c8e62",
+        "referrer": "http://127.0.0.1:5000/"
+    }
+]

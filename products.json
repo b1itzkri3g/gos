@@ -1,0 +1,52 @@
+[
+    {
+        "id": 1,
+        "name": "Purple Haze",
+        "type": "Sativa",
+        "image": "images/products/purple-haze.jpg",
+        "thc": "22%",
+        "status": "Out of Stock",
+        "price": "$45.00",
+        "rating": 4.8,
+        "description": "A classic sativa-dominant strain known for its euphoric and creative effects.",
+        "effects": [
+            {
+                "name": "Creative",
+                "icon": "fas fa-paint-brush"
+            },
+            {
+                "name": "Energetic",
+                "icon": "fas fa-bolt"
+            },
+            {
+                "name": "Focused",
+                "icon": "fas fa-bullseye"
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "name": "Blue Dream",
+        "type": "Hybrid",
+        "image": "images/products/blue-dream.jpg",
+        "thc": "18%",
+        "status": "Out of Stock",
+        "price": "$40.00",
+        "rating": 4.5,
+        "description": "A balanced hybrid offering gentle cerebral invigoration and full-body relaxation.",
+        "effects": [
+            {
+                "name": "Relaxed",
+                "icon": "fas fa-couch"
+            },
+            {
+                "name": "Happy",
+                "icon": "fas fa-smile"
+            },
+            {
+                "name": "Creative",
+                "icon": "fas fa-paint-brush"
+            }
+        ]
+    }
+]

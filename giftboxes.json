@@ -1,0 +1,15 @@
+[
+    {
+        "id": "af9e1d39-3108-4d34-9d17-5d6fc6dabe87",
+        "title": "asdf",
+        "description": "asdf",
+        "gift_type": "discount",
+        "discount_amount": "20",
+        "product_id": null,
+        "start_time": "2025-03-24T13:49:00+06:25",
+        "duration_hours": "1",
+        "claimed": false,
+        "claimed_by": null,
+        "claimed_at": null
+    }
+]

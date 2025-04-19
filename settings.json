@@ -1,0 +1,38 @@
+{
+    "general": {
+        "site_name": "Gift of Shiva",
+        "theme_color": "#16a34a"
+    },
+    "contact": {
+        "contact_email": "info@giftofshiva.com",
+        "contact_phone": "(555) 123-4567",
+        "contact_address": "Yangon",
+        "telegram_username": "@GiftOfShivaOfficial",
+        "delivery_fees": [
+            {
+                "township": "Downtown",
+                "fee": "$1000.00"
+            },
+            {
+                "township": "North District",
+                "fee": "$7.50"
+            },
+            {
+                "township": "East Village",
+                "fee": "$6.00"
+            },
+            {
+                "township": "South Side",
+                "fee": "$8.00"
+            },
+            {
+                "township": "West End",
+                "fee": "$7.00"
+            }
+        ]
+    },
+    "security": {
+        "admin_username": "admin",
+        "admin_password": "password"
+    }
+}
